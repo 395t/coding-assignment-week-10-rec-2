@@ -16,7 +16,9 @@ The summary can contain but is not limited to:
 ## DATASETS
 ### Coco 2017
 
-This dataset contains about training/validation split of 118K/5K  and a total of 330k images  including unannotated images that are labeled uniformly distributed across 80 classes.[Microsoft COCO: Common Objects in Context,2014](https://arxiv.org/pdf/1405.0312.pdf)
+This dataset contains about training/validation split of 118K/5K  and a total of 330k images  including unannotated images that are labeled uniformly distributed across 80 classes.
+
+[Microsoft COCO: Common Objects in Context,2014](https://arxiv.org/pdf/1405.0312.pdf)
 
 
 ## Deformable DETR
