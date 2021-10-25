@@ -27,9 +27,9 @@ The epoch was varied from 50-500 across all three models there was no observable
 
 Average Precision 
 
-| Epoch       | Loss            | AP    | AP$_{50}$ | AP$_{75}$ | AP$_{small}$| AP$_{med}$ | AP$_{large}$ |
-| :---        | :---            | :---  | :---    |:---     |:---       |:---      |:---        |
-| 50          | 6.2433 | 0.414 | 0.618   |0.449    |0.237      |0.453     |0.560
+| Epoch | Loss            | AP    | AP$$_{50}$$ | AP$$_{75}$$ | AP$$_{small}$$| AP$$_{med}$$ | AP$$_{large}$$ |
+| :--  | :--            | :--  | :--    |:--     |:--       |:--      |:--        |
+| 50    | 6.2433 | 0.414 | 0.618   |0.449    |0.237      |0.453     |0.560
 
 Average Recall 
 
