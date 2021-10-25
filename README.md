@@ -27,15 +27,15 @@ The epoch was varied from 50-500 across all three models there was no observable
 
 Average Precision 
 
-| Epoch | Loss | AP | $AP_50$ | AP_75 | AP_small| AP_med | AP_large |
+| Epoch | Loss | AP | AP<sub>50</sub> | AP_75 | AP_small| AP_med | AP_large |
 | :--  | :--   | :--  | :-- |:--  |:--  |:-- |:-- |
 | 50   | 6.2433 | 0.414 | 0.618 |0.449|0.237|0.453|0.560
 
 Average Recall 
 
-| Epoch       | Loss            | AR$_{1}$ | AR$_{10}$ | AP$_{100}$ | AR$_{small}$| AR$_{med}$ | AR$_{large}$ |
-| :---        | :---            | :---  | :---    |:---      |:---       |:---      |:---        |
-| 50          | 6.2433  | 0.340 | 0.556   |0.571     |0.373      |0.624     |0.803
+| Epoch | Loss | AR$_{1}$ | AR$_{10}$ | AP$_{100}$ | AR$_{small}$| AR$_{med}$ | AR$_{large}$ |
+| :--  | :-- | :--  | :--    |:-- |:-- |:--  |:-- |
+| 50   | 6.2433  | 0.340 | 0.556|0.571|0.373 |0.624|0.803
 
 
 ### Deformable DETR Single-Scale
