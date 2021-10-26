@@ -20,6 +20,56 @@ This dataset contains about training/validation split of 118K/5K  and a total of
 
 [Microsoft COCO: Common Objects in Context,2014](https://arxiv.org/pdf/1405.0312.pdf)
 
+## Deformable Convolutional Networks
+
+### faster rcnn r50
+| Evaluation Type | IoU | Area | MaxDets | Result |
+| ----------- | --- | --- | --- | --- |
+|Average Precision|  0.50:0.95 | all | 100|0.374
+|Average Precision|  0.50 | all | 1000|0.581
+|Average Precision|  0.75 | all | 1000|0.404
+|Average Precision|  0.50:0.95 | small | 1000|0.212
+|Average Precision|  0.50:0.95 | medium | 1000|0.410
+|Average Precision|  0.50:0.95 | large | 1000|0.481
+|Average Recall|  0.50:0.95 | all | 100|0.517
+|Average Recall|  0.50:0.95 | all | 300|0.517
+|Average Recall|  0.50:0.95 | all | 1000|0.516
+|Average Recall|  0.50:0.95 | small | 1000|0.326
+|Average Recall|  0.50:0.95 | medium | 1000|0.557
+|Average Recall|  0.50:0.95 | large | 1000|0.648
+
+### dconv faster rcnn r50
+| Evaluation Type | IoU | Area | MaxDets | Result |
+| ----------- | --- | --- | --- | --- |
+|Average Precision|  0.50:0.95 | all | 100|0.413
+|Average Precision|  0.50 | all | 1000|0.624
+|Average Precision|  0.75 | all | 1000|0.450
+|Average Precision|  0.50:0.95 | small | 1000|0.246
+|Average Precision|  0.50:0.95 | medium | 1000|0.449
+|Average Precision|  0.50:0.95 | large | 1000|0.554
+|Average Recall|  0.50:0.95 | all | 100|0.549
+|Average Recall|  0.50:0.95 | all | 300|0.549
+|Average Recall|  0.50:0.95 | all | 1000|0.549
+|Average Recall|  0.50:0.95 | small | 1000|0.353
+|Average Recall|  0.50:0.95 | medium | 1000|0.590
+|Average Recall|  0.50:0.95 | large | 1000|0.698
+
+### mdconv faster rcnn r50
+
+| Evaluation Type | IoU | Area | MaxDets | Result |
+| ----------- | --- | --- | --- | --- |
+|Average Precision|  0.50:0.95 | all | 100|0.414
+|Average Precision|  0.50 | all | 1000|0.625
+|Average Precision|  0.75 | all | 1000|0.456
+|Average Precision|  0.50:0.95 | small | 1000|0.246
+|Average Precision|  0.50:0.95 | medium | 1000|0.452
+|Average Precision|  0.50:0.95 | large | 100|0.542
+|Average Recall|  0.50:0.95 | all | 300|0.548
+|Average Recall|  0.50:0.95 | all | 1000|0.548
+|Average Recall|  0.50:0.95 | all | 1000|0.548
+|Average Recall|  0.50:0.95 | small | 1000|0.359
+|Average Recall|  0.50:0.95 | medium | 1000|0.587
+|Average Recall|  0.50:0.95 | large | 1000|0.691
 
 ## Deformable DETR
 
