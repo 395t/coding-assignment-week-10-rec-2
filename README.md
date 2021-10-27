@@ -44,6 +44,15 @@ This consists of 20 object categories with each image has pixel-level segmentati
 
 ## Deformable Convolutional Networks
 
+OpenMMLab Github Repository: https://github.com/open-mmlab/
+
+The following data are all pre-trained by OpenMMlab using the COCO 2017 dataset
+
+### Loss during training
+The following four models use the same backbone R-50-FPN
+![](images/deconv_coco_methods.png)
+
+![](images/deconv_coco_models.png)
 ### faster rcnn r50
 | Evaluation Type | IoU | Area | MaxDets | Result |
 | ----------- | --- | --- | --- | --- |
