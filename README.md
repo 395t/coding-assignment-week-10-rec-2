@@ -73,6 +73,40 @@ This dataset contains about training/validation split of 118K/5K  and a total of
 |Average Recall|  0.50:0.95 | medium | 1000|0.587
 |Average Recall|  0.50:0.95 | large | 1000|0.691
 
+### dconv faster rcnn r50 dpool
+
+| Evaluation Type | IoU | Area | MaxDets | Result |
+| ----------- | --- | --- | --- | --- |
+|Average Precision|  0.50:0.95 | all | 100|0.381
+|Average Precision|  0.50 | all | 1000|0.597
+|Average Precision|  0.75 | all | 1000|0.420
+|Average Precision|  0.50:0.95 | small | 1000|0.224
+|Average Precision|  0.50:0.95 | medium | 1000|0.415
+|Average Precision|  0.50:0.95 | large | 100|0.494
+|Average Recall|  0.50:0.95 | all | 300|0.522
+|Average Recall|  0.50:0.95 | all | 1000|0.522
+|Average Recall|  0.50:0.95 | all | 1000|0.522
+|Average Recall|  0.50:0.95 | small | 1000|0.334
+|Average Recall|  0.50:0.95 | medium | 1000|0.559
+|Average Recall|  0.50:0.95 | large | 1000|0.655
+
+### dconv faster rcnn r50 mdpool
+
+| Evaluation Type | IoU | Area | MaxDets | Result |
+| ----------- | --- | --- | --- | --- |
+|Average Precision|  0.50:0.95 | all | 100|0.379
+|Average Precision|  0.50 | all | 1000|0.594
+|Average Precision|  0.75 | all | 1000|0.418
+|Average Precision|  0.50:0.95 | small | 1000|0.224
+|Average Precision|  0.50:0.95 | medium | 1000|0.414
+|Average Precision|  0.50:0.95 | large | 100|0.493
+|Average Recall|  0.50:0.95 | all | 300|0.519
+|Average Recall|  0.50:0.95 | all | 1000|0.519
+|Average Recall|  0.50:0.95 | all | 1000|0.519
+|Average Recall|  0.50:0.95 | small | 1000|0.329
+|Average Recall|  0.50:0.95 | medium | 1000|0.558
+|Average Recall|  0.50:0.95 | large | 1000|0.652
+
 ## Deformable DETR
 
 For evaluation we for three variants of the model Deformable DETR basic, the single-scale meaning only using res5 feature map (of stride 32) as input feature maps for Deformable Transformer Encoder and the single-scale DC5 means the stride in C5 stage of ResNet and add a dilation of 2 instead.
