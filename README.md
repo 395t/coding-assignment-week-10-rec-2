@@ -13,13 +13,33 @@ The summary can contain but is not limited to:
 - Ipython notebooks can be organized in `notebooks`.
 
 
+
+We covered the implementation and evaluation of these object detection models
+
+- [Deformable Convolutional Networks, Dai, Qi, Xiong, Li, Zhang, Hu, Wei; 2017](https://arxiv.org/abs/1703.06211)
+
+- [CornerNet: Detecting Objects as Paired Keypoints, Law, Deng; 2018](https://arxiv.org/abs/1808.01244)
+
+- [Objects as Points , Zhou, Wang, Krähenbühl; 2019](https://arxiv.org/abs/1904.07850)
+
+- [End-to-End Object Detection with Transformers,, Carion, Massa, Synnaeve, Usunier, Kirillov, Zagoruyko; 2020](https://arxiv.org/abs/2005.12872)
+
+- [Deformable DETR: Deformable Transformers for End-to-End Object Detection , Zhu, Su, Lu, Li, Wang, Dai; 2020](https://arxiv.org/abs/2010.04159#)
+
 ## DATASETS
-### Coco 2017
 
-This dataset contains about training/validation split of 118K/5K  and a total of 330k images  including unannotated images that are labeled uniformly distributed across 80 classes.
+We evaluate our tasks on two datasets
+### COCO 2017
 
-[Microsoft COCO: Common Objects in Context,2014](https://arxiv.org/pdf/1405.0312.pdf)
+This dataset contains about training/validation split of 118K/5K  and a total of 330k images including unannotated images that are labeled uniformly distributed across 80 classes.
 
+- [Microsoft COCO: Common Objects in Context,2014](https://arxiv.org/pdf/1405.0312.pdf)
+
+### PASCAL VOC 2012
+
+This consists of 20 object categories with each image has pixel-level segmentation annotations, bounding box annotations, and object class annotations.training/validation split of 9717/1823 images.
+
+- [PASCAL VOC (PASCAL Visual Object Classes Challenge)](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/#data)
 
 
 ## Deformable Convolutional Networks
@@ -80,13 +100,15 @@ The epoch was varied from 50-500 across all three models there was no observable
 
 ## Evaluation Results
 
-Training with 5 epochs on Pascal VOC datasets
+Training with 5 epochs on Pascal VOC datasets with 70 number of queries.
 
 ![voc-training](images/deformable-detr-voc-training.png)
 
+Validation
 
 
-### Results on Coco 2017 Datasets with pretrained model
+
+Due to constraint in time to train evaluated on model on coco 2017 datasets comparing the single-scale,single-scale-dc5 and the base detr model.
 ### Deformable DETR Single-Scale DC5
 
 Average Precision 
@@ -130,7 +152,7 @@ Average Recall
 | :--  | :--   | :--  | :-- |:--  |:--  |:-- |:-- |
 | 50  | 5.8611 | 0.353 | 0.587 |0.629 |0.416 |0.673 |0.819 |
 
-### Ablation with different backbone
+Comparison by changing the convolution backbone of ResNet-50 vs ResNet-101
 
 | Method             | Backbone   | loss | AP | AP<sub>50</sub> | AP<sub>75</sub> | AP<sub>small</sub>| AP<sub>med</sub> | AP<sub>large</sub> |
 | :--               | :--       | :--  | :--    | :--  | :-- | :-- | :-- | :-- |
@@ -141,8 +163,6 @@ Average Recall
 | Deformable DETR-DC5| ResNet-50  |6.2433 |0.414 | 0.618   |0.449 |0.237 |0.453 |0.560 |
 | Deformable DETR-DC5| ResNet-101 |17.3633  |0.057 | 0.119 | 0.048 | 0.048 | 0.079 | 0.045 |
 
-With ResNet-101 as a backbone comparing 
-
 ## Reference
 
-Any code that you borrow or other reference should be properly cited.
+[Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
