@@ -20,6 +20,8 @@ This dataset contains about training/validation split of 118K/5K  and a total of
 
 [Microsoft COCO: Common Objects in Context,2014](https://arxiv.org/pdf/1405.0312.pdf)
 
+
+
 ## Deformable Convolutional Networks
 
 ### faster rcnn r50
@@ -75,6 +77,16 @@ This dataset contains about training/validation split of 118K/5K  and a total of
 
 For evaluation we for three variants of the model Deformable DETR basic, the single-scale meaning only using res5 feature map (of stride 32) as input feature maps for Deformable Transformer Encoder and the single-scale DC5 means the stride in C5 stage of ResNet and add a dilation of 2 instead.
 The epoch was varied from 50-500 across all three models there was no observable changes in both evaluation loss, average precision and average recall for all three models used.
+
+## Evaluation Results
+
+Training with 5 epochs on Pascal VOC datasets
+
+![voc-training](images/deformable-detr-voc-training.png)
+
+
+
+### Results on Coco 2017 Datasets with pretrained model
 ### Deformable DETR Single-Scale DC5
 
 Average Precision 
@@ -129,6 +141,7 @@ Average Recall
 | Deformable DETR-DC5| ResNet-50  |6.2433 |0.414 | 0.618   |0.449 |0.237 |0.453 |0.560 |
 | Deformable DETR-DC5| ResNet-101 |17.3633  |0.057 | 0.119 | 0.048 | 0.048 | 0.079 | 0.045 |
 
+With ResNet-101 as a backbone comparing 
 
 ## Reference
 
