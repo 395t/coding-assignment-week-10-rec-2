@@ -96,89 +96,8 @@ The following four models use the same backbone R-50-FPN
 ![](images/deconv_coco_methods.png)
 
 ![](images/deconv_coco_models.png)
-### faster rcnn r50
-| Evaluation Type | IoU | Area | MaxDets | Result |
-| ----------- | --- | --- | --- | --- |
-|Average Precision|  0.50:0.95 | all | 100|0.374
-|Average Precision|  0.50 | all | 1000|0.581
-|Average Precision|  0.75 | all | 1000|0.404
-|Average Precision|  0.50:0.95 | small | 1000|0.212
-|Average Precision|  0.50:0.95 | medium | 1000|0.410
-|Average Precision|  0.50:0.95 | large | 1000|0.481
-|Average Recall|  0.50:0.95 | all | 100|0.517
-|Average Recall|  0.50:0.95 | all | 300|0.517
-|Average Recall|  0.50:0.95 | all | 1000|0.516
-|Average Recall|  0.50:0.95 | small | 1000|0.326
-|Average Recall|  0.50:0.95 | medium | 1000|0.557
-|Average Recall|  0.50:0.95 | large | 1000|0.648
 
-### dconv faster rcnn r50
-| Evaluation Type | IoU | Area | MaxDets | Result |
-| ----------- | --- | --- | --- | --- |
-|Average Precision|  0.50:0.95 | all | 100|0.413
-|Average Precision|  0.50 | all | 1000|0.624
-|Average Precision|  0.75 | all | 1000|0.450
-|Average Precision|  0.50:0.95 | small | 1000|0.246
-|Average Precision|  0.50:0.95 | medium | 1000|0.449
-|Average Precision|  0.50:0.95 | large | 1000|0.554
-|Average Recall|  0.50:0.95 | all | 100|0.549
-|Average Recall|  0.50:0.95 | all | 300|0.549
-|Average Recall|  0.50:0.95 | all | 1000|0.549
-|Average Recall|  0.50:0.95 | small | 1000|0.353
-|Average Recall|  0.50:0.95 | medium | 1000|0.590
-|Average Recall|  0.50:0.95 | large | 1000|0.698
-
-### mdconv faster rcnn r50
-
-| Evaluation Type | IoU | Area | MaxDets | Result |
-| ----------- | --- | --- | --- | --- |
-|Average Precision|  0.50:0.95 | all | 100|0.414
-|Average Precision|  0.50 | all | 1000|0.625
-|Average Precision|  0.75 | all | 1000|0.456
-|Average Precision|  0.50:0.95 | small | 1000|0.246
-|Average Precision|  0.50:0.95 | medium | 1000|0.452
-|Average Precision|  0.50:0.95 | large | 100|0.542
-|Average Recall|  0.50:0.95 | all | 100|0.548
-|Average Recall|  0.50:0.95 | all | 300|0.548
-|Average Recall|  0.50:0.95 | all | 1000|0.548
-|Average Recall|  0.50:0.95 | small | 1000|0.359
-|Average Recall|  0.50:0.95 | medium | 1000|0.587
-|Average Recall|  0.50:0.95 | large | 1000|0.691
-
-### dconv faster rcnn r50 dpool
-
-| Evaluation Type | IoU | Area | MaxDets | Result |
-| ----------- | --- | --- | --- | --- |
-|Average Precision|  0.50:0.95 | all | 100|0.381
-|Average Precision|  0.50 | all | 1000|0.597
-|Average Precision|  0.75 | all | 1000|0.420
-|Average Precision|  0.50:0.95 | small | 1000|0.224
-|Average Precision|  0.50:0.95 | medium | 1000|0.415
-|Average Precision|  0.50:0.95 | large | 100|0.494
-|Average Recall|  0.50:0.95 | all | 100|0.522
-|Average Recall|  0.50:0.95 | all | 300|0.522
-|Average Recall|  0.50:0.95 | all | 1000|0.522
-|Average Recall|  0.50:0.95 | small | 1000|0.334
-|Average Recall|  0.50:0.95 | medium | 1000|0.559
-|Average Recall|  0.50:0.95 | large | 1000|0.655
-
-### dconv faster rcnn r50 mdpool
-
-| Evaluation Type | IoU | Area | MaxDets | Result |
-| ----------- | --- | --- | --- | --- |
-|Average Precision|  0.50:0.95 | all | 100|0.379
-|Average Precision|  0.50 | all | 1000|0.594
-|Average Precision|  0.75 | all | 1000|0.418
-|Average Precision|  0.50:0.95 | small | 1000|0.224
-|Average Precision|  0.50:0.95 | medium | 1000|0.414
-|Average Precision|  0.50:0.95 | large | 100|0.493
-|Average Recall|  0.50:0.95 | all | 100|0.519
-|Average Recall|  0.50:0.95 | all | 300|0.519
-|Average Recall|  0.50:0.95 | all | 1000|0.519
-|Average Recall|  0.50:0.95 | small | 1000|0.329
-|Average Recall|  0.50:0.95 | medium | 1000|0.558
-|Average Recall|  0.50:0.95 | large | 1000|0.652
-
+### COCO 2017 Evaluation table
 - `dconv` and `mdconv` denote (modulated) deformable convolution, `c3-c5` means adding dconv in resnet stage 3 to 5. `dpool` and `mdpool` denote (modulated) deformable roi pooling.
 
 | Backbone            | Model  | method | AP | AP<sub>50</sub> | AP<sub>75</sub> | AP<sub>small</sub>| AP<sub>med</sub> | AP<sub>large</sub> |
@@ -202,6 +121,22 @@ The following four models use the same backbone R-50-FPN
 | R-50-FPN| Faster  |mdpool |0.519 | 0.519   |0.519 |0.329 |0.558 |0.652 |
 | R-50-FPN | Mask | dconv(c3-c5) | 0.551|0.551|0.551|0.356|0.590|0.704
 | R-50-FPN | Cascade | dconv(c3-c5) | 0.571 | 0.571|0.571|0.369|0.608|0.728
+
+### dconv faster rcnn r50
+| Evaluation Type | IoU | Area | MaxDets | Result |
+| ----------- | --- | --- | --- | --- |
+|Average Precision|  0.50:0.95 | all | 100|0.413
+|Average Precision|  0.50 | all | 1000|0.624
+|Average Precision|  0.75 | all | 1000|0.450
+|Average Precision|  0.50:0.95 | small | 1000|0.246
+|Average Precision|  0.50:0.95 | medium | 1000|0.449
+|Average Precision|  0.50:0.95 | large | 1000|0.554
+|Average Recall|  0.50:0.95 | all | 100|0.549
+|Average Recall|  0.50:0.95 | all | 300|0.549
+|Average Recall|  0.50:0.95 | all | 1000|0.549
+|Average Recall|  0.50:0.95 | small | 1000|0.353
+|Average Recall|  0.50:0.95 | medium | 1000|0.590
+|Average Recall|  0.50:0.95 | large | 1000|0.698
 
 ### Classification example
 faster rcnn r50
