@@ -254,6 +254,8 @@ Comparison by changing the convolution backbone of ResNet-50 vs ResNet-101
 | Deformable DETR-DC5| ResNet-50  |6.2433 |0.414 | 0.618   |0.449 |0.237 |0.453 |0.560 |
 | Deformable DETR-DC5| ResNet-101 |17.3633  |0.057 | 0.119 | 0.048 | 0.048 | 0.079 | 0.045 |
 
+Observed high evaluation loss when the backbone in contrast to the backbone used to train initially.This maybe due the weights initialization at training time that causes bad performance during evaluation.
+
 ## Center Net
 
 Problems with training center-net. 
