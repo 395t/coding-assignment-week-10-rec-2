@@ -51,8 +51,6 @@ The trainval set was split up into a training and validation set (90% training, 
 
  Below is the output of the validation error. We were not able to output the training error.
 
- 
-
 
 ## Deformable Convolutional Networks
 
