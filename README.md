@@ -41,6 +41,18 @@ This consists of 20 object categories with each image has pixel-level segmentati
 
 - [PASCAL VOC (PASCAL Visual Object Classes Challenge)](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/#data)
 
+## CornerNet
+
+To train and fine-tune a CornerNet model, we first downloaded a pre-trained CornerNet model from [princeton-vl/CornerNet](https://github.com/princeton-vl/CornerNet) github. According to the repository, this model had been trained on the PASCAL dataset, with the year unidentified, for 500k iterations. 
+
+Using the instructions from the repo, such as installing conda and compiling NMS code, we specified the configuation files to load in this pre-trained model. The instructions originally set up the model to be trained on the COCO 2014 dataset and evaluated on the 2017 validation set. But, we changed the dataloader to instead load in the 2012 PASCAL trainval set.
+
+The trainval set was split up into a training and validation set (90% training, 10% validation). We had 11,540 images in total, and 9,717 went to training and 1,823 went to validation. Using the TACC, we fine-tuned the pretrained CornerNet for 6,000 iterations ~30 epochs.
+
+ Below is the output of the validation error. We were not able to output the training error.
+
+ 
+
 
 ## Deformable Convolutional Networks
 
