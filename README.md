@@ -47,10 +47,43 @@ To train and fine-tune a CornerNet model, we first downloaded a pre-trained Corn
 
 Using the instructions from the repo, such as installing conda and compiling NMS code, we specified the configuation files to load in this pre-trained model. The instructions originally set up the model to be trained on the COCO 2014 dataset and evaluated on the 2017 validation set. But, we changed the dataloader to instead load in the 2012 PASCAL trainval set.
 
-The trainval set was split up into a training and validation set (90% training, 10% validation). We had 11,540 images in total, and 9,717 went to training and 1,823 went to validation. Using the TACC, we fine-tuned the pretrained CornerNet for 6,000 iterations ~30 epochs.
+The trainval set was split up into a training and validation set (~85% training, ~15% validation). We had 11,540 images in total, and 9,717 went to training and 1,823 went to validation. Using the TACC, we fine-tuned the pretrained CornerNet for 6,000 iterations ~30 epochs.
 
- Below is the output of the validation error. We were not able to output the training error.
+Below is the MAP (Mean Average Precision) on the validation data over 30 epochs.
 
+<img src="./images/CornerNet_MAP_plot.jpg" width="50%">
+
+Below is the MAR (Mean Average Recall) on the validation data over 30 epoches.
+
+<img src="./images/CornerNet_MAR.jpg" width="50%">
+
+You can see that the CornerNet model started to overfit towards the latter half of the fine-tuning. At about the 13th epoch, the CornerNet achieved it's highest MAP and MAR. Still, the output for validation loss confirms overfitting.
+
+<img src="./images/CornerNet_val_loss.jpg" width="60%">
+
+The solid line is the smoothed version, while the faded line is the actual validation loss.
+
+Below is our training loss which did sparatically decrease through all 30 epochs.
+
+<img src="./images/CornerNet_train_loss.jpg" width="60%">
+
+Below are the final AP and AR values from epoch 30.
+
+
+| Evaluation Type | IoU | Area | MaxDets | Result |
+| ----------- | --- | --- | --- | --- |
+|Average Precision|  0.50:0.95 | all | 100| 0.5789
+|Average Precision|  0.50 | all | 1000| 0.7527
+|Average Precision|  0.75 | all | 1000|0.5862
+|Average Precision|  0.50:0.95 | small | 1000|0.2317
+|Average Precision|  0.50:0.95 | medium | 1000|0.5897
+|Average Precision|  0.50:0.95 | large | 1000|0.6813
+|Average Recall|  0.50:0.95 | all | 100|0.4696
+|Average Recall|  0.50:0.95 | all | 300|0.6551
+|Average Recall|  0.50:0.95 | all | 1000|0.7021
+|Average Recall|  0.50:0.95 | small | 1000|0.4210
+|Average Recall|  0.50:0.95 | medium | 1000|0.7439
+|Average Recall|  0.50:0.95 | large | 1000|0.7755
 
 ## Deformable Convolutional Networks
 
