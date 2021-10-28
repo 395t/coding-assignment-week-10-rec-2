@@ -1,19 +1,3 @@
-# coding-template
-
-## Summary
-
-The summary can contain but is not limited to:
-
-- Code structure.
-
-- Commands to reproduce your experiments.
-
-- Write-up of your findings and conclusions.
-
-- Ipython notebooks can be organized in `notebooks`.
-
-
-
 We covered the implementation and evaluation of these object detection models
 
 - [Deformable Convolutional Networks, Dai, Qi, Xiong, Li, Zhang, Hu, Wei; 2017](https://arxiv.org/abs/1703.06211)
