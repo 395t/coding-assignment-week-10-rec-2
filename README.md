@@ -146,6 +146,12 @@ The following four models use the same backbone R-50-FPN
 |Average Recall|  0.50:0.95 | medium | 1000|0.558
 |Average Recall|  0.50:0.95 | large | 1000|0.652
 
+### Classification example
+faster rcnn r50
+![](images/classification_original.png)
+dconv faster rcnn r50
+![](images/classification_dconv.png)
+
 ## Deformable DETR
 ## Training on PASCAL VOC
 
