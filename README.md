@@ -206,6 +206,16 @@ Comparison by changing the convolution backbone of ResNet-50 vs ResNet-101
 | Deformable DETR-DC5| ResNet-50  |6.2433 |0.414 | 0.618   |0.449 |0.237 |0.453 |0.560 |
 | Deformable DETR-DC5| ResNet-101 |17.3633  |0.057 | 0.119 | 0.048 | 0.048 | 0.079 | 0.045 |
 
+## Center Net
+
+Problems with training center-net. 
+The centernet code requires pytorch 0.4.1 or 0.4.0 to run. Later versions of pytorch do not support center-net. Pytorch 0.4.1/0.4.0 do not run on cuda versions higher than 9. 
+I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1. 
+![CenterNet](https://user-images.githubusercontent.com/13065170/139183826-6b2a7258-6df5-45fc-9c84-6a05607b0a9a.png)
+
+
+
 ## Reference
 
 [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
+[Center Net] (https://github.com/xingyizhou/CenterNet)
