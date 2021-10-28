@@ -109,7 +109,9 @@ The following four models use the same backbone R-50-FPN
 | R-50-FPN | Faster  | mdconv(c3-c5)  |0.414| 0.625 |0.456    |0.246 |0.452 |0.542 |
 | R-50-FPN | Faster | dpool  | 0.381 | 0.597 | 0.420 | 0.224 | 0.415 | 0.494|
 | R-50-FPN| Faster  |mdpool |0.379 | 0.594   |0.418 |0.224 |0.414 |0.493 |
+| R-50-FPN | Mask | - | 0.382| 0.588| 0.414|0.219|0.409 | 0.495|
 | R-50-FPN | Mask | dconv(c3-c5) | 0.418| 0.627| 0.462|0.245|0.453 | 0.554|
+| R-50-FPN | Cascade | - | 0.403| 0.586|0.440|0.225|0.438|0.529|
 | R-50-FPN | Cascade | dconv(c3-c5) | 0.438| 0.626|0.479|0.263|0.472|0.585|
 
 | Backbone            | Model  | method | AR<sub>100</sub> | AR<sub>300</sub> | AR<sub>1000</sub> | AR<sub>small</sub>| AR<sub>med</sub> | AR<sub>large</sub> |
@@ -121,8 +123,10 @@ The following four models use the same backbone R-50-FPN
 | R-50-FPN | Faster  | mdconv(c3-c5)  |0.548| 0.548 |0.548    |0.359 |0.587 |0.691 |
 | R-50-FPN | Faster | dpool  | 0.522 | 0.522 | 0.522 | 0.334 | 0.559 | 0.655|
 | R-50-FPN| Faster  |mdpool |0.519 | 0.519   |0.519 |0.329 |0.558 |0.652 |
-| R-50-FPN | Mask | dconv(c3-c5) | 0.551|0.551|0.551|0.356|0.590|0.704
-| R-50-FPN | Cascade | dconv(c3-c5) | 0.571 | 0.571|0.571|0.369|0.608|0.728
+| R-50-FPN | Mask | - | 0.524| 0.524| 0.524|0.329|0.557 | 0.662|
+| R-50-FPN | Mask | dconv(c3-c5) | 0.551|0.551|0.551|0.356|0.590|0.704|
+| R-50-FPN | Cascade | - | 0.543 | 0.543|0.543|0.333|0.582|0.689|
+| R-50-FPN | Cascade | dconv(c3-c5) | 0.571 | 0.571|0.571|0.369|0.608|0.728|
 
 ### dconv faster rcnn r50
 | Evaluation Type | IoU | Area | MaxDets | Result |
