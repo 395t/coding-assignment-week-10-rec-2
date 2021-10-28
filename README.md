@@ -247,7 +247,7 @@ We consider the following model setups:
 
 Deformable DETR is trained much faster than DETR, as highlighted in the paper. We trained 300 epochs for DETR and 200 epochs for Deformable DETR. Even after 300 epochs, the classification error of both DETR ResNet-50 and ResNet-101 models are still high. Deformable models achieve much better acccuracy. All models achieved roughly over 0.4 MAP. 
 
-![](images/scratch_MAP.png)
+<img width="850px" src="images/scratch_mAP.png"/> 
 
 | Method             | Backbone   | AP | AP<sub>50</sub> | AP<sub>75</sub> | AP<sub>small</sub>| AP<sub>med</sub> | AP<sub>large</sub> |
 | :--                | :----------      | :--    | :--  | :-- | :-- | :-- | :-- |
@@ -278,4 +278,4 @@ We compared the fine-tuning results of DETR and Deformable DETR on the PASCAL VO
 | Deformable DETR-DC5| ResNet-50        | 0.565 | 0.781 |0.628 |0.190 |0.430 |0.663 |
 | Deformable DETR-Iterative| ResNet-50  | 0.621 | 0.802 |0.679 |0.220 |0.466 |0.714 |
 
-![](images/finetune_MAP.png)
+<img width="850px" src="images/finetune_mAP.png"/> 
