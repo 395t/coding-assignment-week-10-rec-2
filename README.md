@@ -209,3 +209,53 @@ Comparison by changing the convolution backbone of ResNet-50 vs ResNet-101
 ## Reference
 
 [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
+
+
+# Training / Fine-tuning on Pascal VOC 2012
+This consists of 20 object categories with each image has pixel-level segmentation annotations, bounding box annotations, and object class annotations.
+In this project, we split the dataset into 9717 training images and 1823 validation images.
+
+We consider the following model setups:
+
+## Training from scratch:
+* DETR
+    + Backbone ResNet-50
+    + Backbone ResNet-101
+* Deformable DETR 
+    + Backbone ResNet-50
+    + Backbone ResNet-101
+
+Deformable DETR is trained much faster than DETR, as highlighted in the paper. We trained 300 epochs for DETR and 200 epochs for Deformable DETR. Even after 300 epochs, the classification error of both DETR ResNet-50 and ResNet-101 models are still high. Deformable models achieve much better acccuracy. All models achieved roughly over 0.4 MAP. 
+
+![](images/scratch_MAP.png)
+
+| Method             | Backbone   | AP | AP<sub>50</sub> | AP<sub>75</sub> | AP<sub>small</sub>| AP<sub>med</sub> | AP<sub>large</sub> |
+| :--                | :----------      | :--    | :--  | :-- | :-- | :-- | :-- |
+| DETR               | ResNet-50        | 0.461 | 0.687 |0.484 |0.067 |0.261 |0.580 |
+| DETR               | ResNet-101       | 0.480 | 0.702 |0.508 |0.073 |0.280 |0.595 |
+| Deformable DETR    | ResNet-50        | 0.433 | 0.681 |0.468 |0.103 |0.270 |0.531 |
+| Deformable DETR    | ResNet-101       | 0.458 | 0.709 |0.491 |0.076 |0.303 |0.561 |
+
+
+## Fine-tuning from the pre-trained weights from COCO dataset. 
+* DETR
+    + Backbone ResNet-50
+    + Backbone ResNet-50 + DC5 (dilation)
+    + Backbone ResNet-101
+* Deformable DETR 
+    + Backbone ResNet-50
+    + Backbone ResNet-50 + Iterative Refinement Box
+    + Backbone ResNet-50 + DC5 
+
+We compared the fine-tuning results of DETR and Deformable DETR on the PASCAL VOC 2012 dataset, too. The weights are pretrained on COCO dataset. We finetuned all models for 20 epochs. Iterative refinement is the most effective trick to improve average precision. For VOC dataset, dilation is not working as well as DETR reported on COCO. 
+
+| Method             | Backbone   | AP | AP<sub>50</sub> | AP<sub>75</sub> | AP<sub>small</sub>| AP<sub>med</sub> | AP<sub>large</sub> |
+| :--                | :----------      | :--    | :--  | :-- | :-- | :-- | :-- |
+| DETR               | ResNet-50        | 0.575 | 0.776 |0.618 |0.159 |0.402 |0.683 |
+| DETR-DC5           | ResNet-50        | 0.580 | 0.772 |0.622 |0.156 |0.395 |0.689 |
+| DETR               | ResNet-101       | 0.591 | 0.778 |0.643 |0.155 |0.405 |0.700 |
+| Deformable DETR    | ResNet-50        | 0.581 | 0.790 |0.650 |0.192 |0.420 |0.675 |
+| Deformable DETR-DC5| ResNet-50        | 0.565 | 0.781 |0.628 |0.190 |0.430 |0.663 |
+| Deformable DETR-Iterative| ResNet-50  | 0.621 | 0.802 |0.679 |0.220 |0.466 |0.714 |
+
+![](images/finetune_MAP.png)
