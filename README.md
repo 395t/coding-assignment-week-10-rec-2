@@ -1,6 +1,6 @@
-# coding-template
+<!-- # coding-template -->
 
-## Summary
+<!-- ## Summary
 
 The summary can contain but is not limited to:
 
@@ -11,7 +11,7 @@ The summary can contain but is not limited to:
 - Write-up of your findings and conclusions.
 
 - Ipython notebooks can be organized in `notebooks`.
-
+ -->
 
 
 We covered the implementation and evaluation of these object detection models
@@ -147,19 +147,18 @@ The following four models use the same backbone R-50-FPN
 |Average Recall|  0.50:0.95 | large | 1000|0.652
 
 ## Deformable DETR
-
-For evaluation we for three variants of the model Deformable DETR basic, the single-scale meaning only using res5 feature map (of stride 32) as input feature maps for Deformable Transformer Encoder and the single-scale DC5 means the stride in C5 stage of ResNet and add a dilation of 2 instead.
-The epoch was varied from 50-500 across all three models there was no observable changes in both evaluation loss, average precision and average recall for all three models used.
-
-## Evaluation Results
+## Training on PASCAL VOC
 
 Training with 5 epochs on Pascal VOC datasets with 70 number of queries.
 
 ![voc-training](images/deformable-detr-voc-training.png)
 
-Validation
+<!-- Validation -->
 
+## Evaluation with pre-trained model on COCO 2017
 
+We evaluated on three variants of the model Deformable DETR basic, the single-scale meaning only using res5 feature map (of stride 32) as input feature maps for Deformable Transformer Encoder and the single-scale DC5 means the stride in C5 stage of ResNet and add a dilation of 2 instead.
+The epoch was varied from 50-500 across all three models there was no observable changes in both evaluation loss, average precision and average recall for all three models used.
 
 Due to constraint in time to train evaluated on model on coco 2017 datasets comparing the single-scale,single-scale-dc5 and the base detr model.
 ### Deformable DETR Single-Scale DC5
@@ -228,7 +227,8 @@ I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1.
 ## Reference
 
 [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
-[Center Net] (https://github.com/xingyizhou/CenterNet)
+
+[Center Net](https://github.com/xingyizhou/CenterNet)
 
 
 # Training / Fine-tuning on Pascal VOC 2012
@@ -238,6 +238,7 @@ In this project, we split the dataset into 9717 training images and 1823 validat
 We consider the following model setups:
 
 ## Training from scratch:
+
 * DETR
     + Backbone ResNet-50
     + Backbone ResNet-101
@@ -258,6 +259,7 @@ Deformable DETR is trained much faster than DETR, as highlighted in the paper. W
 
 
 ## Fine-tuning from the pre-trained weights from COCO dataset. 
+
 * DETR
     + Backbone ResNet-50
     + Backbone ResNet-50 + DC5 (dilation)
