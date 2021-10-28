@@ -222,15 +222,6 @@ The centernet code requires pytorch 0.4.1 or 0.4.0 to run. Later versions of pyt
 I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1. 
 ![CenterNet](https://user-images.githubusercontent.com/13065170/139183826-6b2a7258-6df5-45fc-9c84-6a05607b0a9a.png)
 
-
-
-## Reference
-
-[Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
-
-[Center Net](https://github.com/xingyizhou/CenterNet)
-
-
 # Training / Fine-tuning on Pascal VOC 2012
 This consists of 20 object categories with each image has pixel-level segmentation annotations, bounding box annotations, and object class annotations.
 In this project, we split the dataset into 9717 training images and 1823 validation images.
@@ -281,3 +272,9 @@ We compared the fine-tuning results of DETR and Deformable DETR on the PASCAL VO
 | Deformable DETR-Iterative| ResNet-50  | 0.621 | 0.802 |0.679 |0.220 |0.466 |0.714 |
 
 <img width="850px" src="images/finetune_mAP.png"/> 
+
+## Reference
+
+[Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
+
+[Center Net](https://github.com/xingyizhou/CenterNet)
