@@ -100,7 +100,6 @@ The following four models use the same backbone R-50-FPN
 ### COCO 2017 Evaluation table
 - `dconv` and `mdconv` denote (modulated) deformable convolution, `c3-c5` means adding dconv in resnet stage 3 to 5. `dpool` and `mdpool` denote (modulated) deformable roi pooling.
 
-#### Average Precision
 | Backbone            | Model  | method | AP | AP<sub>50</sub> | AP<sub>75</sub> | AP<sub>small</sub>| AP<sub>med</sub> | AP<sub>large</sub> |
 | :--               | :--       | :--  | :--    | :--  | :-- | :-- | :-- | :-- |
 | R-50-FPN    | Faster  | -  |0.374 | 0.581   |0.404 |0.212 |0.410 |0.481 |
@@ -110,11 +109,9 @@ The following four models use the same backbone R-50-FPN
 | R-50-FPN | Faster  | mdconv(c3-c5)  |0.414| 0.625 |0.456    |0.246 |0.452 |0.542 |
 | R-50-FPN | Faster | dpool  | 0.381 | 0.597 | 0.420 | 0.224 | 0.415 | 0.494|
 | R-50-FPN| Faster  |mdpool |0.379 | 0.594   |0.418 |0.224 |0.414 |0.493 |
-| R-50-FPN | Mask | - | 0.382| 0.588| 0.414|0.219|0.406 | 0.495|
 | R-50-FPN | Mask | dconv(c3-c5) | 0.418| 0.627| 0.462|0.245|0.453 | 0.554|
-| R-50-FPN | Cascade | - | 0.403| 0.586|0.440|0.225|0.438|0.529|
 | R-50-FPN | Cascade | dconv(c3-c5) | 0.438| 0.626|0.479|0.263|0.472|0.585|
-#### Average Recall
+
 | Backbone            | Model  | method | AR<sub>100</sub> | AR<sub>300</sub> | AR<sub>1000</sub> | AR<sub>small</sub>| AR<sub>med</sub> | AR<sub>large</sub> |
 | :--               | :--       | :--  | :--    | :--  | :-- | :-- | :-- | :-- |
 | R-50-FPN    | Faster  | -  |0.517 | 0.517   |0.516 |0.326 |0.557 |0.648 |
@@ -124,10 +121,8 @@ The following four models use the same backbone R-50-FPN
 | R-50-FPN | Faster  | mdconv(c3-c5)  |0.548| 0.548 |0.548    |0.359 |0.587 |0.691 |
 | R-50-FPN | Faster | dpool  | 0.522 | 0.522 | 0.522 | 0.334 | 0.559 | 0.655|
 | R-50-FPN| Faster  |mdpool |0.519 | 0.519   |0.519 |0.329 |0.558 |0.652 |
-| R-50-FPN | Mask | - | 0.524| 0.524| 0.524|0.329|0.557 | 0.662|
-| R-50-FPN | Mask | dconv(c3-c5) | 0.551|0.551|0.551|0.356|0.590|0.704|
-| R-50-FPN | Cascade | - | 0.543| 0.543|0.543|0.333|0.582|0.689|
-| R-50-FPN | Cascade | dconv(c3-c5) | 0.571 | 0.571|0.571|0.369|0.608|0.728|
+| R-50-FPN | Mask | dconv(c3-c5) | 0.551|0.551|0.551|0.356|0.590|0.704
+| R-50-FPN | Cascade | dconv(c3-c5) | 0.571 | 0.571|0.571|0.369|0.608|0.728
 
 ### dconv faster rcnn r50
 | Evaluation Type | IoU | Area | MaxDets | Result |
@@ -227,7 +222,7 @@ Observed high evaluation loss when the backbone in contrast to the backbone used
 Problems with training center-net. 
 The centernet code requires pytorch 0.4.1 or 0.4.0 to run. Later versions of pytorch do not support center-net. Pytorch 0.4.1/0.4.0 do not run on cuda versions higher than 9. 
 I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1. 
-ctdet_coco_dla_2x
+**ctdet_coco_dla_2x**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.374  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.551  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.408  
@@ -241,7 +236,7 @@ ctdet_coco_dla_2x
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.594  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.737  
  
-ctdet_coco_dla_1x
+**ctdet_coco_dla_1x**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.363  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.540  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.396  
@@ -255,7 +250,7 @@ ctdet_coco_dla_1x
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.596  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.727  
  
-2X FLIP-TEST
+**2x FLIP-TEST**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.570  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.427  
@@ -269,7 +264,7 @@ ctdet_coco_dla_1x
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.746  
 
---test_scales 0.5
+**--test_scales 0.5**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.309  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.478  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.322  
@@ -284,7 +279,7 @@ ctdet_coco_dla_1x
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.715  
 
 
---test_scales 0.75
+**--test_scales 0.75**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.378  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.555  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.405  
@@ -299,7 +294,7 @@ ctdet_coco_dla_1x
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.753  
 
 
---test_scales 1
+**--test_scales 1**  
 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.570  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.427  
@@ -315,7 +310,7 @@ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392
 
 
 
---test_scales 1.25
+**--test_scales 1.25**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.374  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.553  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.405  
@@ -329,7 +324,7 @@ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.620  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.707  
 
---test_scales 1.5
+**--test_scales 1.5**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.348  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.518  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.380  
@@ -343,7 +338,7 @@ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.622  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.638  
 
---test_scales 1.75
+**--test_scales 1.75**  
 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.320  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.478  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.350  
