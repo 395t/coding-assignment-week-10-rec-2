@@ -220,6 +220,20 @@ Observed high evaluation loss when the backbone in contrast to the backbone used
 Problems with training center-net. 
 The centernet code requires pytorch 0.4.1 or 0.4.0 to run. Later versions of pytorch do not support center-net. Pytorch 0.4.1/0.4.0 do not run on cuda versions higher than 9. 
 I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1. 
+2x
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.374 |
+| Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.551 |
+| Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.408|
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.206|
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.420|
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.506|
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.317|
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.521|
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.551|
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.336|
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.594|
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.737|
+ 
 ![CenterNet](https://user-images.githubusercontent.com/13065170/139183826-6b2a7258-6df5-45fc-9c84-6a05607b0a9a.png)
 
 # Training / Fine-tuning on Pascal VOC 2012
