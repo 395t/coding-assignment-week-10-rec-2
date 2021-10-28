@@ -184,18 +184,6 @@ def build_voc(image_set, args):
         "val": (root / "val2012", root / "annotations" / 'val2012.json'),
     }
 
-    #img_folder = os.path.join(root, 'VOCdevkit/VOC2012/JPEGImages')
-    #ann_file = '/scratch1/08401/ywen/data/object_detection/VOCdevkit/VOC2012/coco.json'
-    #dataset = VOCDetection(
-    #    img_folder, ann_file,
-    #    transforms=make_coco_transforms(image_set),
-    #    return_masks=args.masks,
-    #)
-    #train_size = int(0.8 * len(dataset))
-    #test_size = len(dataset) - train_size
-    #train_dataset, val_dataset = torch.utils.data.random_split(
-    #    dataset, [train_size, test_size])
-    #setattr(val_dataset.dataset, '_transforms', make_coco_transforms('val'))
     img_folder, ann_file = PATHS[image_set]
     dataset = CocoDetection(img_folder, ann_file, transforms=make_coco_transforms(image_set), return_masks=args.masks)
 
