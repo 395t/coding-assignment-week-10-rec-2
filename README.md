@@ -105,8 +105,8 @@ The following four models use the same backbone R-50-FPN
 |Average Precision|  0.50:0.95 | small | 1000|0.246
 |Average Precision|  0.50:0.95 | medium | 1000|0.452
 |Average Precision|  0.50:0.95 | large | 100|0.542
+|Average Recall|  0.50:0.95 | all | 100|0.548
 |Average Recall|  0.50:0.95 | all | 300|0.548
-|Average Recall|  0.50:0.95 | all | 1000|0.548
 |Average Recall|  0.50:0.95 | all | 1000|0.548
 |Average Recall|  0.50:0.95 | small | 1000|0.359
 |Average Recall|  0.50:0.95 | medium | 1000|0.587
@@ -122,8 +122,8 @@ The following four models use the same backbone R-50-FPN
 |Average Precision|  0.50:0.95 | small | 1000|0.224
 |Average Precision|  0.50:0.95 | medium | 1000|0.415
 |Average Precision|  0.50:0.95 | large | 100|0.494
+|Average Recall|  0.50:0.95 | all | 100|0.522
 |Average Recall|  0.50:0.95 | all | 300|0.522
-|Average Recall|  0.50:0.95 | all | 1000|0.522
 |Average Recall|  0.50:0.95 | all | 1000|0.522
 |Average Recall|  0.50:0.95 | small | 1000|0.334
 |Average Recall|  0.50:0.95 | medium | 1000|0.559
@@ -139,12 +139,36 @@ The following four models use the same backbone R-50-FPN
 |Average Precision|  0.50:0.95 | small | 1000|0.224
 |Average Precision|  0.50:0.95 | medium | 1000|0.414
 |Average Precision|  0.50:0.95 | large | 100|0.493
+|Average Recall|  0.50:0.95 | all | 100|0.519
 |Average Recall|  0.50:0.95 | all | 300|0.519
-|Average Recall|  0.50:0.95 | all | 1000|0.519
 |Average Recall|  0.50:0.95 | all | 1000|0.519
 |Average Recall|  0.50:0.95 | small | 1000|0.329
 |Average Recall|  0.50:0.95 | medium | 1000|0.558
 |Average Recall|  0.50:0.95 | large | 1000|0.652
+
+- `dconv` and `mdconv` denote (modulated) deformable convolution, `c3-c5` means adding dconv in resnet stage 3 to 5. `dpool` and `mdpool` denote (modulated) deformable roi pooling.
+
+| Backbone            | Model  | method | AP | AP<sub>50</sub> | AP<sub>75</sub> | AP<sub>small</sub>| AP<sub>med</sub> | AP<sub>large</sub> |
+| :--               | :--       | :--  | :--    | :--  | :-- | :-- | :-- | :-- |
+| R-50-FPN    | Faster  | -  |0.374 | 0.581   |0.404 |0.212 |0.410 |0.481 |
+| R-50-FPN    | Faster | dconv(c3-c5) | 0.413 | 0.624 |0.450| 0.246 | 0.449 | 0.554|
+| R-101-FPN    | Faster | dconv(c3-c5) | 0.427 | 0.637 |0.468| 0.249 | 0.467 | 0.568|
+| R-50-FPN | Faster  | mdconv(c3-c5)  |0.414| 0.625 |0.456    |0.246 |0.452 |0.542 |
+| R-50-FPN | Faster | dpool  | 0.381 | 0.597 | 0.420 | 0.224 | 0.415 | 0.494|
+| R-50-FPN| Faster  |mdpool |0.379 | 0.594   |0.418 |0.224 |0.414 |0.493 |
+| R-50-FPN | Mask | dconv(c3-c5) | 0.418| 0.627| 0.462|0.245|0.453 | 0.554|
+| R-50-FPN | Cascade | dconv(c3-c5) | 0.438| 0.626|0.479|0.263|0.472|0.585|
+
+| Backbone            | Model  | method | AR<sub>100</sub> | AR<sub>300</sub> | AR<sub>1000</sub> | AR<sub>small</sub>| AR<sub>med</sub> | AR<sub>large</sub> |
+| :--               | :--       | :--  | :--    | :--  | :-- | :-- | :-- | :-- |
+| R-50-FPN    | Faster  | -  |0.517 | 0.517   |0.516 |0.326 |0.557 |0.648 |
+| R-50-FPN    | Faster | dconv(c3-c5) | 0.549 | 0.549 |0.549| 0.353 | 0.590 | 0.698|
+| R-101-FPN    | Faster | dconv(c3-c5) | 0.557 | 0.557 |0.557| 0.354 | 0.602 | 0.708|
+| R-50-FPN | Faster  | mdconv(c3-c5)  |0.548| 0.548 |0.548    |0.359 |0.587 |0.691 |
+| R-50-FPN | Faster | dpool  | 0.522 | 0.522 | 0.522 | 0.334 | 0.559 | 0.655|
+| R-50-FPN| Faster  |mdpool |0.519 | 0.519   |0.519 |0.329 |0.558 |0.652 |
+| R-50-FPN | Mask | dconv(c3-c5) | 0.551|0.551|0.551|0.356|0.590|0.704
+| R-50-FPN | Cascade | dconv(c3-c5) | 0.571 | 0.571|0.571|0.369|0.608|0.728
 
 ### Classification example
 faster rcnn r50
