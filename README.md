@@ -41,6 +41,16 @@ This consists of 20 object categories with each image has pixel-level segmentati
 
 - [PASCAL VOC (PASCAL Visual Object Classes Challenge)](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/#data)
 
+## CornerNet
+
+To train and fine-tune a CornerNet model, we first downloaded a pre-trained CornerNet model from [princeton-vl/CornerNet](https://github.com/princeton-vl/CornerNet) github. According to the repository, this model had been trained on the PASCAL dataset, with the year unidentified, for 500k iterations. 
+
+Using the instructions from the repo, such as installing conda and compiling NMS code, we specified the configuation files to load in this pre-trained model. The instructions originally set up the model to be trained on the COCO 2014 dataset and evaluated on the 2017 validation set. But, we changed the dataloader to instead load in the 2012 PASCAL trainval set.
+
+The trainval set was split up into a training and validation set (90% training, 10% validation). We had 11,540 images in total, and 9,717 went to training and 1,823 went to validation. Using the TACC, we fine-tuned the pretrained CornerNet for 6,000 iterations ~30 epochs.
+
+ Below is the output of the validation error. We were not able to output the training error.
+
 
 ## Deformable Convolutional Networks
 
@@ -206,9 +216,19 @@ Comparison by changing the convolution backbone of ResNet-50 vs ResNet-101
 | Deformable DETR-DC5| ResNet-50  |6.2433 |0.414 | 0.618   |0.449 |0.237 |0.453 |0.560 |
 | Deformable DETR-DC5| ResNet-101 |17.3633  |0.057 | 0.119 | 0.048 | 0.048 | 0.079 | 0.045 |
 
+## Center Net
+
+Problems with training center-net. 
+The centernet code requires pytorch 0.4.1 or 0.4.0 to run. Later versions of pytorch do not support center-net. Pytorch 0.4.1/0.4.0 do not run on cuda versions higher than 9. 
+I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1. 
+![CenterNet](https://user-images.githubusercontent.com/13065170/139183826-6b2a7258-6df5-45fc-9c84-6a05607b0a9a.png)
+
+
+
 ## Reference
 
 [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR)
+[Center Net] (https://github.com/xingyizhou/CenterNet)
 
 
 # Training / Fine-tuning on Pascal VOC 2012
