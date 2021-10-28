@@ -220,7 +220,7 @@ Observed high evaluation loss when the backbone in contrast to the backbone used
 Problems with training center-net. 
 The centernet code requires pytorch 0.4.1 or 0.4.0 to run. Later versions of pytorch do not support center-net. Pytorch 0.4.1/0.4.0 do not run on cuda versions higher than 9. 
 I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1. 
-**ctdet_coco_dla_2x**
+**ctdet_coco_dla_2x**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.374  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.551  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.408  
@@ -234,7 +234,7 @@ I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1.
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.594  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.737  
  
-**ctdet_coco_dla_1x**
+**ctdet_coco_dla_1x**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.363  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.540  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.396  
@@ -248,7 +248,7 @@ I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1.
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.596  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.727  
  
-**2x FLIP-TEST**
+**2x FLIP-TEST**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.570  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.427  
@@ -262,7 +262,7 @@ I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1.
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.746  
 
-**--test_scales 0.5**
+**--test_scales 0.5**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.309  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.478  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.322  
@@ -277,7 +277,7 @@ I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1.
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.715  
 
 
-**--test_scales 0.75**
+**--test_scales 0.75**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.378  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.555  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.405  
@@ -292,7 +292,7 @@ I installed cuda 9.0 in frontera and I also installed pytorch 0.4.1.
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.753  
 
 
-**--test_scales 1**
+**--test_scales 1**  
 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.570  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.427  
@@ -308,7 +308,7 @@ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392
 
 
 
-**--test_scales 1.25**
+**--test_scales 1.25**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.374  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.553  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.405  
@@ -322,7 +322,7 @@ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.620  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.707  
 
-**--test_scales 1.5**
+**--test_scales 1.5**  
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.348  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.518  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.380  
@@ -336,7 +336,7 @@ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.622  
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.638  
 
-**--test_scales 1.75**
+**--test_scales 1.75**  
 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.320  
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.478  
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.350  
